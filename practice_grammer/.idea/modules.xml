@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/../practice_grammer/.idea/01_practice_grammer.iml" filepath="$PROJECT_DIR$/../practice_grammer/.idea/01_practice_grammer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../blockchain/.idea/01_practice_grammer.iml" filepath="$PROJECT_DIR$/../blockchain/.idea/01_practice_grammer.iml" />
     </modules>
   </component>
 </project>

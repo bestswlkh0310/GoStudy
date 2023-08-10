@@ -9,6 +9,14 @@ import (
 	"math/big"
 )
 
+const targetBits = 16
+
+type ProofOfWork struct {
+	Block *Block
+
+	target *big.Int
+}
+
 func NewProofOfWork(b *Block) *ProofOfWork {
 	target := big.NewInt(1)
 	target.Lsh(target, uint(256-targetBits))

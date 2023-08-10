@@ -3,7 +3,7 @@ package main
 import (
 	"bytes"
 	"crypto/sha256"
-	"math/big"
+	"encoding/gob"
 	"strconv"
 	"time"
 )
@@ -33,10 +33,14 @@ func NewBlock(data string, prevBlockHash []byte) *Block {
 	return block
 }
 
-const targetBits = 16
+func (b *Block) Serialize() []byte {
+	var result bytes.Buffer
 
-type ProofOfWork struct {
-	Block *Block
+	encoder := gob.NewEncoder(&result)
+	err := encoder.Encode(b)
+	if err != nil {
+		return nil
+	}
 
-	target *big.Int
+	return result.Bytes()
 }
